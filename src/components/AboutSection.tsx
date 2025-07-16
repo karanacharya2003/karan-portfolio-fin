@@ -122,28 +122,17 @@ const AboutSection: React.FC = () => {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
               <motion.a
-                href="/KaranAcharya_Resume.pdf"
-                download
-                whileHover={{ scale: 1.02, boxShadow: "0 10px 40px rgba(255, 255, 255, 0.1)" }}
+                href="https://drive.google.com/file/d/1kkLIKgJtxkJ-Z1xCWp0oHuSTwchGOcYj/view?usp=share_link"
+                target="_blank"
+                rel="noopener noreferrer"
+               
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-4 rounded-[16px] bg-white text-black text-base font-medium tracking-wide transition-all duration-300 hover:bg-gray-200 shadow-lg flex items-center justify-center"
               >
                 Download Resume
               </motion.a>
 
-              <motion.a
-                href="mailto:karanacharya2003@gmail.com"
-                whileHover={{
-                  scale: 1.02,
-                  borderColor: "#ffffff",
-                  color: "#ffffff",
-                  boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)",
-                }}
-                whileTap={{ scale: 0.98 }}
-                className="px-8 py-4 rounded-[16px] border-2 border-gray-600 text-gray-300 text-base font-medium tracking-wide transition-all duration-300 hover:bg-gray-800 flex items-center justify-center"
-              >
-                Get in Touch
-              </motion.a>
+            
             </div>
           </motion.div>
         </div>

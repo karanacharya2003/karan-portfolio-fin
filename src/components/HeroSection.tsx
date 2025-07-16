@@ -14,10 +14,10 @@ const HeroSection: React.FC = () => {
     >
       {/* Animated Blobs */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-  <div className="absolute w-72 h-72 bg-neutral-800 rounded-full mix-blend-screen filter blur-2xl  isolate animate-blob top-0 left-0" />
-  <div className="absolute w-72 h-72 bg-neutral-700 rounded-full mix-blend-screen filter blur-2xl  isolate animate-blob animation-delay-2000 top-10 left-1/2" />
-  <div className="absolute w-72 h-72 bg-neutral-600 rounded-full mix-blend-screen filter blur-2xl  isolate animate-blob animation-delay-4000 top-20 left-1/3" />
-</div>
+        <div className="absolute w-72 h-72 bg-neutral-800 rounded-full mix-blend-screen filter blur-2xl  isolate animate-blob top-0 left-0" />
+        <div className="absolute w-72 h-72 bg-neutral-700 rounded-full mix-blend-screen filter blur-2xl  isolate animate-blob animation-delay-2000 top-10 left-1/2" />
+        <div className="absolute w-72 h-72 bg-neutral-600 rounded-full mix-blend-screen filter blur-2xl  isolate animate-blob animation-delay-4000 top-20 left-1/3" />
+      </div>
 
 
       {/* Content */}
@@ -55,7 +55,7 @@ const HeroSection: React.FC = () => {
               <h1
                 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight"
                 style={{
-               fontFamily: 'Satoshi , sans-serif',
+                  fontFamily: 'Satoshi , sans-serif',
                   letterSpacing: '-0.02em',
                   lineHeight: '1.1'
                 }}
@@ -104,28 +104,30 @@ const HeroSection: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <motion.a
-                href="/KaranAcharya_Resume.pdf"
-                download="KaranAcharya_Resume.pdf"
+                href="https://drive.google.com/file/d/1kkLIKgJtxkJ-Z1xCWp0oHuSTwchGOcYj/view?usp=share_link"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, boxShadow: shadows }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center justify-center space-x-2 px-8 py-4 bg-white text-black font-medium rounded-full transition-all duration-300 hover:bg-gray-200 shadow-lg"
-
+                className="flex items-center justify-center space-x-2 px-8 py-4 bg-white text-black font-medium rounded-[16px] transition-all duration-300 hover:bg-gray-200 shadow-lg"
               >
                 <Download className="w-5 h-5" />
                 <span className="tracking-wide">DOWNLOAD RESUME</span>
               </motion.a>
 
+
               <motion.a
                 href="mailto:karanacharya2003@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{
                   scale: 1.02,
                   borderColor: '#ffffff',
                   color: '#ffffff',
-                  boxShadow: '0 0 20px rgba(255, 255, 255, 0.2)'
+                  boxShadow: '0 0 20px rgba(255, 255, 255, 0.2)',
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center justify-center space-x-2 px-8 py-4 border-2 border-gray-600 text-gray-300 font-medium rounded-full transition-all duration-300 hover:bg-gray-800"
-
+                className="flex items-center justify-center space-x-2 px-8 py-4 border-2 border-gray-600 text-gray-300 font-medium rounded-[16px] transition-all duration-300 hover:bg-gray-800"
               >
                 <Mail className="w-5 h-5" />
                 <span className="tracking-wide">GET IN TOUCH</span>
