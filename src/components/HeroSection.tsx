@@ -93,7 +93,7 @@ const HeroSection: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2 text-gray-400">
                 <MapPin className="w-5 h-5" />
-                <span className="text-sm md:text-base">Ahmedabad, Gujarat</span>
+                <span className="text-sm md:text-base">Gandhinagar, Gujarat</span>
               </div>
             </motion.div>
 
@@ -104,7 +104,7 @@ const HeroSection: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <motion.a
-                href="https://drive.google.com/file/d/1kkLIKgJtxkJ-Z1xCWp0oHuSTwchGOcYj/view?usp=share_link"
+                href="https://drive.google.com/file/d/1nQBJyJ_tbS-Ea7HYrtipuNUMN9UPH9LN/view?usp=share_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, boxShadow: shadows }}

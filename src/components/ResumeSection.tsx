@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Download,
+
   Calendar,
   MapPin,
-  Award,
+
   Code,
   Database,
   Cloud,
@@ -14,129 +14,88 @@ import {
 const ResumeSection: React.FC = () => {
   const experiences = [
     {
-      title: "Software Engineer Intern",
-      company: "Code Sherlock",
-      period: "Apr 2025 - Present",
+      title: "Software Developer Intern",
+      company: "Fintech Global Center",
+      period: "May 2025 – July 2025",
       location: "Remote",
       description:
-        "Developing and maintaining React components for Code Sherlock's code analysis platform, improving UI and logic while implementing sophisticated AI-powered code analysis systems.",
+        "Maintained React components for Code Sherlock’s platform and integrated an MCP server to auto-assign Asana tasks on , PR issues, streamlining developer workflow.",
       achievements: [
-        "Developed and maintained React components for code analysis platform",
-        "Implemented sophisticated Retrieval-Augmented Generation (RAG) with AST (Tree sitter) for code analysis",
-        "Engineered custom embeddings for code snippets, optimizing context retrieval for accurate code suggestions"
-      ],
+        "Maintained React components for Code Sherlock’s platform and integrated an MCP server to auto-assign Asana tasks on , PR issues, streamlining developer workflow.",
+        "Engineered a sophisticated Retrieval-Augmented Generation (RAG) pipeline using Tree-sitter AST, integrating a LiteLLM-based strategy to call Claude first and fallback to GPT-4o-mini, enabling efficient semantic code search across large PRs",
+        "Enhanced code analysis in 4+ languages by analyzing deeper AST nodes, increasing context coverage by 10%"
+      ]
     },
     {
-      title: "Machine Learning Engineer Intern",
+      title: "Machine Learning Intern",
       company: "Chaitanya AI",
-      period: "May 2024 - July 2024",
+      period: "May 2024 – July 2024",
       location: "Remote",
       description:
-        "Engineered cutting-edge multimodal AI pipelines for automated design generation, integrating advanced language models with image processing capabilities.",
+        "Developed a pretrained pipeline using Generative Adversarial Networks (GANs) to generate synthetic multitemporal hyperspectral data, simulating missing or future timestamps with high spectral and temporal fidelity.",
       achievements: [
-        "Engineered multimodal pipeline transforming user inputs into professional-grade posters and banners",
-        "Increased design output by 25% resulting in faster delivery to clients",
-        "Integrated Mistral AI model for efficient text feature extraction from user prompts"
-      ],
+        "Developed a pretrained pipeline using Generative Adversarial Networks (GANs) to generate synthetic multitemporal hyperspectral data, simulating missing or future timestamps with high spectral and temporal fidelity.",
+        "Enabled robust analysis for change detection, crop monitoring, and disaster assessment by reducing dependency on costly sensors and mitigating issues like cloud-covered imagery."
+      ]
     },
     {
       title: "Teaching Assistant",
-      company: "Indian Institute of Information Technology Vadodara",
-      period: "Aug 2024 - Present",
+      company: "IIIT Vadodara",
+      period: "Aug 2024 – May 2025",
       location: "Gandhinagar, Gujarat, India",
       description:
-        "Supporting students in core computer science courses including data structures and programming fundamentals.",
+        "Conducted labs for 200+ students on core Data Structures and Algorithms topics like graphs, trees, and binary search. Assisted Professor Ravi Nahta across 2 consecutive semesters.",
       achievements: [
-        "Course: Introduction to Data Structures Laboratory (CS162)",
-        "Course: Computer Programming and Problem Solving (IT101)",
-        "Mentoring students in programming concepts and problem-solving techniques"
-      ],
-    }
-  ];
-
-  const education = [
-    {
-      degree: "Bachelor of Technology in Computer Science Engineering",
-      school: "Indian Institute of Information Technology Vadodara (IIITV)",
-      period: "2022-2026",
-      location: "Gandhinagar, Gujarat, India",
-      cpi: "8.93/10 (up to 5th semester)",
-    },
-    {
-      degree: "Class 12th CBSE Board",
-      school: "Chinmaya Vidyalaya",
-      period: "2020-2022",
-      location: "India",
-      cpi: "88.3%",
-    },
-    {
-      degree: "Class 10th CBSE Board",
-      school: "The Pentecostal Assembly School",
-      period: "2008-2020",
-      location: "India",
-      cpi: "96.6%",
+        "Conducted labs for 200+ students on core Data Structures and Algorithms topics like graphs, trees, and binary search.",
+        "Assisted Professor Ravi Nahta across 2 consecutive semesters."
+      ]
     }
   ];
 
   const skills = {
-    domains: ["REACT", "Data Structures and Algorithms", "GAN", "NLP", "Agentic AI", "MCP"],
-    languages: ["C/C++", "Java", "Python", "JavaScript"],
-    frameworks: ["PyTorch", "Pandas", "NumPy", "Scikit-Learn", "Node.js", "Express", "React", "Spring Boot", "Spring"],
-    databases: ["MongoDB", "MySQL", "JDBC", "JPA", "PostgreSQL"],
-    devops: ["AWS", "Azure", "Docker", "Kubernetes", "Jenkins", "GitHub Actions", "CI/CD"],
-    web: ["HTML", "CSS", "React", "Node.js", "Express", "REST APIs", "Mongoose"],
+    languages: ["C", "C++", "Java", "JavaScript", "Python"],
+    frameworks: ["React.js", "Node.js", "Spring Boot", "Tailwind CSS"],
+    cloudDatabases: ["MongoDB", "Azure", "MySQL", "PostgreSQL", "JDBC", "JPA"],
+    otherTools: ["AWS", "Azure",  "Docker", "Jenkins", "GitHub Actions", "CI/CD"]
   };
+
+  const skillCategories = [
+    { title: "Languages", items: skills.languages, icon: Code },
+    { title: "Frameworks", items: skills.frameworks, icon: Globe },
+    { title: "Cloud / Databases", items: skills.cloudDatabases, icon: Database },
+    { title: "Other Tools", items: skills.otherTools, icon: Cloud }
+  ];
 
   const projects = [
     {
-      title: "Cloud Cost Tracker",
-      technologies: "React, Node.js, MongoDB, AWS, Azure APIs",
-      description: "Dashboard for tracking AWS and Azure cloud expenses with real-time cost visualizations.",
+      title: "Ride Sharing Platform",
+      technologies: "MERN Stack, MapLibre, OpenRouteService, AI-driven Routing",
+      description:
+        "Built a secure ride-sharing app with role-based access for Travelers, Companions, and Admins using MERN stack, and JWT authentication.",
       achievements: [
-        "Integrated AWS and Azure Cost APIs",
-        "Built alert system for budget threshold warnings",
-        "Reduced costs by 15% using optimized resource tracking"
+        "Built a secure ride-sharing app with role-based access for Travelers, Companions, and Admins using MERN stack, and JWT authentication.",
+        "Designed a custom geolocation-based algorithm using OpenRouteService to match rides via waypoints and directional geofencing for partial route-sharing.",
+        "Integrated real-time ride tracking, SMS/WhatsApp updates via Twilio API, and route visualization using MapLibre GL for seamless user experience."
       ]
     },
     {
-      title: "POETICA",
-      technologies: "NLP, LSTM Networks, Keras, TensorFlow",
-      description: "LSTM-powered AI that generates Shakespearean poetry from user prompts.",
+      title: "PoemMe",
+      technologies: "NLP, LSTM, RNNs, Keras, TensorFlow, FastAPI, React",
+      description:
+        "Developed an AI-powered poetry generator using LSTM networks with 200 memory cells trained on n-gram data to mimic Shakespearean style.",
       achievements: [
-        "Trained with 3800+ word vocabulary",
-        "80% accuracy on n-gram data",
-        "Character-level prediction for poetry generation"
-      ]
-    },
-    {
-      title: "E-commerce Application",
-      technologies: "Django, SQL",
-      description: "Robust e-commerce platform with admin and customer modules.",
-      achievements: [
-        "Secure login, product CRUD & checkout flow",
-        "REST APIs tested with Postman",
-        "Seamless frontend-backend integration"
+        "Developed an AI-powered poetry generator using LSTM networks with 200 memory cells trained on n-gram data to mimic Shakespearean style.",
+        "Achieved over 80% training accuracy using a vocabulary of 3800+ words and implemented temperature-based sampling for creative output.",
+        "Built a full-stack application using FastAPI for the backend and React for the frontend, enabling user interaction for poem generation."
       ]
     }
   ];
-
-  const skillCategories = [
-    { title: "Domains", items: skills.domains, icon: Code },
-    { title: "Languages", items: skills.languages, icon: Code },
-    { title: "Frameworks", items: skills.frameworks, icon: Globe },
-    { title: "Databases", items: skills.databases, icon: Database },
-    { title: "DevOps/Cloud", items: skills.devops, icon: Cloud },
-    { title: "Web Technologies", items: skills.web, icon: Globe }
-  ];
-
-
 
   return (
     <section
       id="resume"
       className="relative min-h-screen py-12 sm:py-16 md:py-20 bg-gradient-to-br from-black via-[#111111] to-[#1a1a1a] overflow-hidden"
     >
-      {/* Animated Background Blobs */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div className="absolute w-72 h-72 bg-neutral-800 rounded-full mix-blend-screen filter blur-2xl opacity-10 animate-blob top-0 left-0" />
         <div className="absolute w-72 h-72 bg-neutral-700 rounded-full mix-blend-screen filter blur-2xl opacity-10 animate-blob animation-delay-2000 top-10 left-1/2" />
@@ -144,18 +103,15 @@ const ResumeSection: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        {/* Section Title */}
         <motion.div className="text-center mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 leading-tight"
-  
           >
-           
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
-             Professional Summary
+              Professional Summary
             </span>
           </motion.h2>
           <motion.p
@@ -170,7 +126,7 @@ const ResumeSection: React.FC = () => {
 
         {/* Work Experience */}
         <motion.div>
-          <h3 className="text-2xl sm:text-3xl font-medium text-white mb-8 text-center">Work Experience</h3>
+          <h3 className="text-2xl sm:text-3xl font-medium text-white mb-8 text-center">Experience</h3>
           <div className="space-y-6">
             {experiences.map((exp, index) => (
               <motion.div
@@ -211,42 +167,10 @@ const ResumeSection: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Education */}
-        <motion.div className="mt-20">
-          <h3 className="text-2xl sm:text-3xl font-medium text-white mb-8 text-center">Education</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {education.map((edu, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="p-6 bg-neutral-900 border border-gray-700 rounded-2xl hover:border-white/30 shadow-sm hover:shadow-lg"
-              >
-                <h4 className="text-lg font-semibold text-white mb-2">{edu.degree}</h4>
-                <p className="text-gray-300 text-sm mb-3">{edu.school}</p>
-                <div className="text-gray-400 text-sm mb-3">
-                  <div className="flex items-center mb-1">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    <span>{edu.period}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    <span>{edu.location}</span>
-                  </div>
-                </div>
-                <p className="text-sm font-medium text-white">
-                  Score: <span className="text-gray-200">{edu.cpi}</span>
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Skills */}
+        {/* Technical Skills */}
         <motion.div className="mt-20">
           <h3 className="text-2xl sm:text-3xl font-medium text-white mb-8 text-center">Technical Skills</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center gap-6">
             {skillCategories.map((cat, i) => (
               <motion.div
                 key={i}
@@ -275,8 +199,8 @@ const ResumeSection: React.FC = () => {
 
         {/* Projects */}
         <motion.div className="mt-20">
-          <h3 className="text-2xl sm:text-3xl font-medium text-white mb-8 text-center">Featured Projects</h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+          <h3 className="text-2xl sm:text-3xl font-medium text-white mb-8 text-center">Personal Projects</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 justify-center gap-6">
             {projects.map((proj, idx) => (
               <motion.div
                 key={idx}
@@ -301,42 +225,18 @@ const ResumeSection: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Download */}
+        {/* Resume Download */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-20"
         >
-          <div className="bg-neutral-900 border border-white/20 rounded-3xl p-10 max-w-4xl mx-auto">
-            <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Award className="w-8 h-8 text-white" />
-            </div>
-
-            <h3 className="text-2xl font-light text-white mb-4">
-              Download My Full Resume
-            </h3>
-            <p className="text-gray-400 mb-8 font-light max-w-2xl mx-auto leading-relaxed text-sm sm:text-base">
-              For a detailed overview of my skills, experience, and achievements, please download my complete resume.
-            </p>
-
-            <motion.a
-              href="/resume.pdf"
-              download="KaranAcharya_Resume.pdf"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center justify-center space-x-2 px-6 py-4 bg-white text-black font-medium rounded-full transition-all duration-300 hover:bg-gray-200 shadow-lg"
-            >
-              <Download className="w-5 h-5" />
-              <span>DOWNLOAD RESUME</span>
-            </motion.a>
-          </div>
+       
         </motion.div>
       </div>
     </section>
   );
-
-
 };
 
 export default ResumeSection;

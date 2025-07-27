@@ -10,7 +10,7 @@ const SocialLinksSection: React.FC = () => {
     {
       name: 'GitHub',
       username: 'karanacharya2003',
-      url: '#',
+      url: 'https://github.com/karanacharya2003',
       icon: <Github className="w-6 h-6" />,
       color: 'from-neutral-800 to-neutral-900',
       bgColor: 'bg-neutral-900',
@@ -18,8 +18,8 @@ const SocialLinksSection: React.FC = () => {
     },
     {
       name: 'LinkedIn',
-      username: 'Karan Acharya',
-      url: '#',
+      username: 'karanacharya2003',
+      url: 'https://www.linkedin.com/in/karanacharya2003/',
       icon: <Linkedin className="w-6 h-6" />,
       color: 'from-neutral-800 to-neutral-900',
       bgColor: 'bg-neutral-900',
@@ -27,8 +27,8 @@ const SocialLinksSection: React.FC = () => {
     },
     {
       name: 'LeetCode',
-      username: 'karanacharya2003',
-      url: '#',
+      username: 'karanacharya16',
+      url: 'https://leetcode.com/u/karanacharya16/',
       icon: <Trophy className="w-6 h-6" />,
       color: 'from-neutral-800 to-neutral-900',
       bgColor: 'bg-neutral-900',

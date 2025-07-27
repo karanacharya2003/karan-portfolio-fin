@@ -1,22 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import { motion } from "framer-motion";
 import DopeLogo from "./DopeLogo";
 
 import Humour from "/Humour.jpeg";
 
 
-const AboutSection: React.FC = () => {
 
+const AboutSection: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640); // Tailwind 'sm' breakpoint
+    };
+
+    handleResize(); // Run on initial load
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Run on initial load
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <section
       id="about"
       className="relative  min-h-screen py-20 bg-gradient-to-br from-black via-[#111111] to-[#1a1a1a]"
     >
-    <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-  <div className="absolute w-72 h-72 bg-neutral-800 rounded-full mix-blend-screen filter blur-2xl isolate animate-blob top-0 left-0" />
-  <div className="absolute w-72 h-72 bg-neutral-700 rounded-full mix-blend-screen filter blur-2xl isolate animate-blob animation-delay-2000 top-10 left-1/2" />
-  <div className="absolute w-72 h-72 bg-neutral-600 rounded-full mix-blend-screen filter blur-2xl isolate animate-blob animation-delay-4000 top-20 left-1/3" />
-</div>
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <div className="absolute w-72 h-72 bg-neutral-800 rounded-full mix-blend-screen filter blur-2xl isolate animate-blob top-0 left-0" />
+        <div className="absolute w-72 h-72 bg-neutral-700 rounded-full mix-blend-screen filter blur-2xl isolate animate-blob animation-delay-2000 top-10 left-1/2" />
+        <div className="absolute w-72 h-72 bg-neutral-600 rounded-full mix-blend-screen filter blur-2xl isolate animate-blob animation-delay-4000 top-20 left-1/3" />
+      </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Title */}
@@ -57,24 +72,29 @@ const AboutSection: React.FC = () => {
             className="relative"
           >
             <div className="relative w-full max-w-md mx-auto">
-           <div className="w-full max-w-[400px] h-[400px] rounded-3xl overflow-hidden bg-neutral-900 shadow-2xl ring-4 ring-white/10">
- <img
-  src={Humour}
-  alt="Profile"
-  className="h-full w-full object-cover object-[60%_center]"
-/>
-
-</div>
+              <div className="w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square rounded-3xl overflow-hidden bg-neutral-900 shadow-2xl ring-4 ring-white/10 mx-auto">
+                <img
+                  src={Humour}
+                  alt="Profile"
+                  className="w-full h-full object-cover object-[60%_center]"
+                />
+              </div>
 
 
               <motion.div
                 initial={{ scale: 0, rotate: -180 }}
                 whileInView={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 0.8, delay: 0.5, type: "spring", stiffness: 100 }}
-                className="absolute -bottom-4 -right-4 p-4 bg-neutral-900 rounded-[16px] shadow-lg border border-gray-700"
+                className={`
+    absolute -bottom-4 -right-4 
+    bg-neutral-900 rounded-[16px] shadow-lg border border-gray-700
+    flex items-center justify-center
+    ${isMobile ? "w-14 h-14 p-2" : "w-20 h-20 p-4"}
+  `}
               >
-                <DopeLogo size="medium" showText={false} />
+                <DopeLogo size={isMobile ? "small" : "medium"} showText={false} />
               </motion.div>
+
             </div>
           </motion.div>
 
@@ -95,7 +115,7 @@ const AboutSection: React.FC = () => {
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed font-light">
-              I enjoy teaching, solving algorithmic problems, and building creative AI-powered experiences—from cloud dashboards to poetic neural networks. My toolkit spans React, PyTorch, PostgreSQL, and more.
+              I enjoy solving algorithmic problems, and building creative AI-powered experiences—from cloud dashboards to poetic neural networks. My toolkit spans React, PyTorch, PostgreSQL, and more.
             </p>
 
             {/* Skills */}
@@ -122,17 +142,17 @@ const AboutSection: React.FC = () => {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
               <motion.a
-                href="https://drive.google.com/file/d/1kkLIKgJtxkJ-Z1xCWp0oHuSTwchGOcYj/view?usp=share_link"
+                href="https://drive.google.com/file/d/1nQBJyJ_tbS-Ea7HYrtipuNUMN9UPH9LN/view?usp=share_link"
                 target="_blank"
                 rel="noopener noreferrer"
-               
+
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-4 rounded-[16px] bg-white text-black text-base font-medium tracking-wide transition-all duration-300 hover:bg-gray-200 shadow-lg flex items-center justify-center"
               >
                 Download Resume
               </motion.a>
 
-            
+
             </div>
           </motion.div>
         </div>
