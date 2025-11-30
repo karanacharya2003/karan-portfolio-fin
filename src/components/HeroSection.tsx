@@ -104,7 +104,7 @@ const HeroSection: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <motion.a
-                href="https://drive.google.com/file/d/1nQBJyJ_tbS-Ea7HYrtipuNUMN9UPH9LN/view?usp=share_link"
+                href="https://drive.google.com/file/d/14YlW6rEe6Q6T_srHTk5T7Vp8EcruC6YI/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02, boxShadow: shadows }}
