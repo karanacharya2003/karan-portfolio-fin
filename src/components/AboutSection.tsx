@@ -69,9 +69,9 @@ const AboutSection: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            className="relative "
           >
-            <div className="relative w-full max-w-md mx-auto">
+            <div className="relative w-full max-w-md mx-auto top  top -translate-y-10">
               <div className="w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square rounded-3xl overflow-hidden bg-neutral-900 shadow-2xl ring-4 ring-white/10 mx-auto">
                 <img
                   src={Humour}
@@ -105,18 +105,20 @@ const AboutSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <p className="text-lg text-gray-300 leading-relaxed font-light">
-              I'm <span className="font-medium text-white">Karan Acharya</span>, a passionate full-stack developer and AI enthusiast pursuing Computer Science at IIIT Vadodara.
-              I enjoy crafting intelligent systems and interfaces that are both performant and human-centric.
-            </p>
+           <p className="text-lg text-gray-300 leading-relaxed font-light">
+  I'm <span className="font-medium text-white">Karan Acharya</span>, a full-stack developer and AI enthusiast pursuing Computer Science at IIIT Vadodara.
+  I enjoy creating products and systems that balance performance, usability, and clear problem-solving.
+</p>
 
-            <p className="text-lg text-gray-300 leading-relaxed font-light">
-              I’ve explored domains like Generative Adversarial Networks, NLP, and Agentic AI. As an intern at Code Sherlock and Chaitanya AI, I’ve implemented real-world solutions combining ML and scalable web technologies.
-            </p>
+<p className="text-lg text-gray-300 leading-relaxed font-light">
+  Working with fast-paced startup teams at Code Sherlock and Chaitanya AI <span className="font-medium text-white"> exposed me to a mix of engineering, design discussions, and customer-focused decision making. </span>
+  Collaborating across teams naturally pulled me towards product thinking - "understanding why we build something, not just how".
+</p>
 
-            <p className="text-lg text-gray-300 leading-relaxed font-light">
-              I enjoy solving algorithmic problems, and building creative AI-powered experiences—from cloud dashboards to poetic neural networks. My toolkit spans React, PyTorch, PostgreSQL, and more.
-            </p>
+<p className="text-lg text-gray-300 leading-relaxed font-light">
+  I've explored domains like NLP, Generative Models, and Agentic AI, building features that combine ML with scalable web technologies.
+  
+</p>
 
             {/* Skills */}
             <div className="flex flex-wrap gap-3 pt-4">

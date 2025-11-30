@@ -164,7 +164,7 @@ const SocialLinksSection: React.FC = () => {
               </p>
               <p>Bachelor of Technology, Computer Science Engineering</p>
               <p className="text-gray-300 font-medium">
-                CPI: 8.93/10 (up to 5th semester) • 2022-2026
+                CPI: 8.8/10 (up to 6th semester) • 2022-2026
               </p>
             </div>
           </div>

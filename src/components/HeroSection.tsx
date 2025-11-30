@@ -72,8 +72,8 @@ const HeroSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 1.0 }}
               className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light"
             >
-              Passionate Software Engineer & Machine Learning Enthusiast currently pursuing Computer Science at IIIT Vadodara.
-              Building innovative solutions through code and exploring the frontiers of AI technology.
+            As someone who enjoys creating products and understanding how systems behave, I explore software engineering and Machine Learning while pursuing Computer Science at IIIT Vadodara. I find my kick in building products, solving system-level challenges, and exploring the frontiers of technology.
+          
             </motion.p>
 
             {/* Contact Info */}
@@ -139,12 +139,12 @@ const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.6 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 pt-12 max-w-2xl mx-auto"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 pt-12 max-w-3xl mx-auto"
             >
               {[
-                { title: 'Years Experience', value: '2+' },
-                { title: 'Projects Completed', value: '5+' },
-                { title: 'Vadodara Student', value: 'IIIT' }
+                { title: 'Years of Experience Across Projects', value: '2+' },
+                { title: 'Projects Completed', value: '8+' },
+                { title: 'in Product & Development', value: '0 -> 1' }
               ].map((item, index) => (
                 <div
                   key={index}
@@ -163,7 +163,7 @@ const HeroSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 1.8 }}
               className="flex flex-wrap justify-center gap-3 pt-8"
             >
-              {['Machine Learning', 'Full-Stack Development', 'Data Science', 'AI Research'].map((skill, index) => (
+              {['Product ','Machine Learning', 'Full-Stack Development', 'Data Science', 'AI Research'].map((skill, index) => (
                 <motion.span
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}

@@ -4,7 +4,7 @@ import {
 
   Calendar,
   MapPin,
-
+  Github,
   Code,
   Database,
   Cloud,
@@ -14,18 +14,18 @@ import {
 const ResumeSection: React.FC = () => {
   const experiences = [
     {
-      title: "Software Developer Intern",
-      company: "Fintech Global Center",
-      period: "May 2025 – July 2025",
-      location: "Remote",
-      description:
-        "Maintained React components for Code Sherlock’s platform and integrated an MCP server to auto-assign Asana tasks on , PR issues, streamlining developer workflow.",
-      achievements: [
-        "Maintained React components for Code Sherlock’s platform and integrated an MCP server to auto-assign Asana tasks on , PR issues, streamlining developer workflow.",
-        "Engineered a sophisticated Retrieval-Augmented Generation (RAG) pipeline using Tree-sitter AST, integrating a LiteLLM-based strategy to call Claude first and fallback to GPT-4o-mini, enabling efficient semantic code search across large PRs",
-        "Enhanced code analysis in 4+ languages by analyzing deeper AST nodes, increasing context coverage by 10%"
-      ]
-    },
+  title: "Product Engineer Intern",
+  company: "Fintech Global Center",
+  period: "May 2025 – July 2025",
+  location: "On-Site, GIFT City, Gandhinagar",
+  description:
+    "Contributed to the Day 0 journey of the product, shaping core architecture decisions, maintaining React components, driving Agentic AI innovations, and leading a platform-wide website overhaul for CodeSherlock.",
+  achievements: [
+    "Worked on foundational product architecture decisions and contributed to the early-stage growth of the platform.",
+    "Maintained and improved React components while driving Agentic AI features and leading a complete website overhaul for CodeSherlock’s platform.",
+    "Enhanced code analysis in 4+ languages by analyzing deeper AST nodes, increasing context coverage by 10%."
+  ]
+},
     {
       title: "Machine Learning Intern",
       company: "Chaitanya AI",
@@ -223,6 +223,18 @@ const ResumeSection: React.FC = () => {
               </motion.div>
             ))}
           </div>
+     <div className="flex justify-center mt-10">
+  <a
+    href="https://github.com/karanacharya2003"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-5 py-2.5 rounded-lg bg-neutral-900 border border-gray-700 text-gray-300 hover:text-white hover:border-white/40 transition-all flex items-center gap-2"
+  >
+    <Github className="w-5 h-5" />
+    View more projects on GitHub
+  </a>
+</div>
+
         </motion.div>
 
         {/* Resume Download */}

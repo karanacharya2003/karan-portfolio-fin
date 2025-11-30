@@ -26,28 +26,31 @@ const TechExpertiseSection: React.FC = () => {
     {
       icon: <LayoutGrid className="w-6 h-6" />,
       title: 'Full-Stack Development',
-      description: 'Building full-featured, scalable web applications using modern stacks.',
+      description: 'Building full-featured, scalable web applications with strong focus on system performance and real-world product requirements.',
       technologies: ['React', 'Node.js', 'TypeScript', 'MongoDB', 'Express.js']
     },
     {
       icon: <Sparkles className="w-6 h-6" />,
-      title: 'Prompt-Driven UI/UX',
-      description: 'Designing clean, intuitive interfaces using prompt engineering and modern design tools.',
-      technologies: ['Figma', 'Bootstrap', 'Cursor AI', 'Prompt Crafting']
+      title: 'Product Thinking & Startup Execution',
+      description: 'Experience working in fast-paced startup teams, shaping features, iterating quickly, and aligning engineering decisions with user needs and product.',
+      technologies: ['MVP Development', 'Agile',  'Feedback Loops', 'Product Management']
     },
     {
       icon: <Hammer className="w-6 h-6" />,
       title: 'Scalable Product Development',
-      description: 'Focused on building real-world products that are performant, productive, and solve real problems.',
+      description: 'Focused on building real-world products that are performant, maintainable, and solve meaningful problems.',
       technologies: ['Next.js', 'Vercel', 'REST APIs', 'JWT Auth']
     },
     {
       icon: <Users className="w-6 h-6" />,
       title: 'Mentorship & Leadership',
-      description: 'Running a tech community and mentoring students in JEE Chemistry and coding with a passion for knowledge sharing.',
+      description: 'Running a college-level tech community and mentoring students on technical domains with a passion for knowledge-sharing.',
       technologies: ['Agile', 'Git', 'Mentorship', 'Community Building']
     }
   ];
+
+  
+
 
   return (
     <section
